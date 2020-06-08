@@ -1,3 +1,4 @@
+#!/bin/sh
 touch /.dockerenv
 apt purge -f -y apache2
 apt update && apt upgrade -f -y
