@@ -10,7 +10,7 @@ ufw allow https
 ufw allow ssh
 ufw allow 9090
 ufw allow 2377
-ufw alow 7946
+ufw allow 7946
 ufw allow 4789
 ufw --force enable 
 systemctl enable ufw
