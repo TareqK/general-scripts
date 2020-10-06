@@ -1,0 +1,25 @@
+[Unit]
+Description= Java Service
+
+[Service]
+
+WorkingDirectory={WORKDIR}
+
+
+#executable is a bash script which calls jar file
+ExecStart=/usr/bin/java -jar {ABSOLUTE_PATH_TO_JAR}
+
+SuccessExitStatus=143
+
+TimeoutStopSec=10
+
+Restart=on-failure
+
+RestartSec=5
+
+StandardOutput=file:/var/log/{STD_LOG}.log
+StandardError=file:/var/log/{STD_ERROR}.err
+[Install]
+
+WantedBy=multi-user.target
+
